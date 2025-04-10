@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS 우선순위</title>
+    <style>
+      /* 
+        1.!improtant : 최우선
+        2. 인라인스타일
+        3. id 선택자
+        4. 클래스 / 속성(type..) / 가상클래스(:hover)
+        5. 태그선택자
+        6. 동일 점수일 경우 나중에 작성된 것이 우선
+*/
+
+      #id-style {
+        background-color: deeppink;
+      }
+      #id-style2 {
+        background-color: deepskyblue;
+      }
+      div {
+        padding: 30px;
+        margin: 30px;
+        background-color: gold;
+      }
+      .class-style3 {
+        background-color: beige !important;
+      }
+      .class-style {
+        background-color: greenyellow;
+      }
+      .class-style2 {
+        background-color: pink;
+        font-size: 30px;
+      }
+      ul > li.li-class {
+        background-color: orange;
+      }
+      ul > li {
+        background-color: violet;
+      }
+    </style>
+  </head>
+  <body>
+    <div style="background-color: aqua">1번(인라인 스타일 우선)</div>
+    <div id="id-style" class="class-style">2번(id 스타일 우선)</div>
+    <div class="class-style">3번(클래스스타일 우선)</div>
+    <div class="class-style2 class-style">4번(나중에 적용된 것 우선)</div>
+    <div>5번(div스타일 적용)</div>
+    <ul>
+      <li class="li-class">6번(점수가 높은 스타일이 우선)</li>
+    </ul>
+    <div id="id-style2" class="class-style3">7번(!important 최우선)</div>
+  </body>
+</html>

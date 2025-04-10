@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>배경</title>
+    <style>
+      html {
+        background: url(./animal.jpg) no-repeat fixed center;
+        background-size: cover;
+      }
+      div {
+        /* background-color: beige; */
+        background-image: url(./bird.png);
+        width: 50%;
+        height: 300px;
+        padding: 20px;
+        border: 3px dotted red;
+        margin-bottom: 20px;
+        background-repeat: no-repeat; /*배경이 한 번만 나옴/ repeat-x, repeat-y*/
+      }
+      #bg1 {
+        background-position: center;
+      }
+      #bg2 {
+        background-position: right bottom;
+      }
+      #bg3 {
+        background-position: 80% 100px;
+      }
+
+      #bg4 {
+        width: 300px;
+        height: 200px;
+        background-size: contain; /*배경보다 배경이미지가 작다면 가로/세로 같은 비율로 증가시켜 맞춰줌*/
+      }
+      #bg5 {
+        width: 100px;
+        height: 80px;
+        background-size: cover; /*배경보다 배경이미지가 크다면 가로/세로 같은 비율로 줄여서 맞춰줌*/
+        background-position: bottom center; /*보고싶은 포지션으로 위치 맞출 때 사용*/
+      }
+    </style>
+  </head>
+  <body>
+    <div id="bg1">
+      <p>
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Debitis
+        consequatur facere placeat error, in recusandae explicabo aspernatur
+        ullam asperiores delectus incidunt non, eveniet quibusdam. Accusamus aut
+        adipisci natus ipsa minus?
+      </p>
+    </div>
+    <div id="bg2">
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque vel
+        quisquam nulla, harum aliquid modi nobis corrupti aperiam dignissimos
+        omnis incidunt porro eaque beatae qui sunt! Accusamus voluptate aut
+        corporis!
+      </p>
+    </div>
+    <div id="bg3">
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste, quidem ea
+        voluptate magnam fugit nobis quos quam consequatur. Consequuntur quia
+        minima magnam corrupti ipsam minus sint obcaecati repellendus quibusdam
+        nisi.
+      </p>
+    </div>
+
+    <div id="bg4"></div>
+    <div id="bg5"></div>
+  </body>
+</html>

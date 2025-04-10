@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <title>position: relative + z-index 예제</title>
+    <style>
+      .container {
+        background-color: #eee;
+        padding: 40px;
+        position: relative;
+        height: 300px;
+      }
+
+      .box {
+        width: 150px;
+        height: 150px;
+        background-color: #4caf50;
+        color: white;
+        font-weight: bold;
+        line-height: 150px;
+        text-align: center;
+        position: relative; /* 기준 유지 */
+      }
+
+      .relative-box {
+        background-color: #ff9800;
+        top: -100px; /* 위로 올려서 겹치게 */
+        left: 80px; /* 오른쪽으로 이동 */
+        z-index: 10; /* 겹칠 때 위에 보이게 */
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="box">기본 박스</div>
+      <div class="box relative-box">relative 박스</div>
+    </div>
+  </body>
+</html>

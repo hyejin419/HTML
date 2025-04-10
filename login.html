@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>폼 태그</title>
+    <style>
+        @font-face {
+        font-family: "Ownglyph_meetme-Rg";
+        src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2402_1@1.0/Ownglyph_meetme-Rg.woff2")
+          format("woff2");
+        font-weight: normal;
+        font-style: normal;
+      }
+      * {
+        box-sizing: border-box;
+        font-family: Ownglyph_meetme-Rg;
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        margin: 0;
+        background-image: url(./knight.jpg);
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+      }
+      body {
+        background-color: #f2f2f2;
+        padding: 40px;
+      }
+      main {
+        max-width: 600px;
+        margin: 0 auto;
+        background-color: white;
+        padding: 30px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+      h1 {
+        text-align: center;
+        margin-bottom: 30px;
+      }
+      form {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+      }
+      label {
+        font-weight: bold;
+        margin-bottom: 5px;
+      }
+      input,
+      select,
+      textarea,
+      button {
+        padding: 10px;
+        width: 100%;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+      }
+      input[type="radio"],
+      input[type="checkbox"] {
+        width: auto;
+        margin-right: 5px;
+      }
+      .form-group.inline {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+      input[type="color"] {
+        width: 50px;
+        height: 40px;
+        padding: 0;
+        border: none;
+      }
+      
+      .form-group {
+        margin-bottom: 15px;
+      }
+      button[type="submit"] {
+        margin-top: 30px;
+        background-color: #4caf50;
+        color: white;
+        font-size: 1rem;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+      }
+      button[type="submit"]:hover {
+        background-color: #45a049;
+      }
+      .absolute-box {
+          position: absolute;
+          bottom: 10px;
+          right: 10px;
+          background-color: darkolivegreen;
+          color: white;
+          padding: 10px 15px;
+          border-radius: 5px;
+          font-size: 0.9rem;
+        }
+    </style>
+  </head>
+  <body>
+    <main>
+      <h1>로그인</h1>
+      <form action="/signup" method="post">
+    </div>
+    <div class="form-group">
+      <label for="email">이메일</label>
+      <input
+        type="email"
+        name="email"
+        id="email"
+        maxlength="100"
+        placeholder="이메일을 입력하세요"
+      />
+    </div>
+        <div class="form-group">
+          <label for="userpw">비밀번호</label>
+          <input
+            type="password"
+            name="userpw"
+            maxlength="20"
+            id="userpw"
+            placeholder="비밀번호를 입력하세요"
+          />
+         <button type="submit">login</button>
+
+          <label for="id">아이디 기억하기</label>
+          <input type="checkbox" id="id" value="id" />
+        
+        <div class="absolute-box">비밀번호를 잊으셨나요?</div>
+        
+      </form>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,122 @@
+@font-face {
+  font-family: "S-CoreDream-3Light";
+  src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-3Light.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: S-CoreDream-3Light;
+}
+
+#container {
+  width: 100%;
+}
+
+header {
+  width: 100%;
+}
+
+header > h1 {
+  text-align: center;
+  font-size: 40px;
+  padding: 20px;
+}
+
+#menus {
+  width: 100%;
+}
+
+#menus > div {
+  height: 300px;
+  border: 1px solid black;
+  margin-bottom: 15px;
+  position: relative;
+  margin-bottom: 20px;
+}
+
+#menus h2 {
+  position: absolute;
+  right: 3%; /*너비가 늘어나고 줄어들기 (비율이 달라지기)때문에 상대값 부여*/
+  bottom: 10px;
+  color: white;
+  text-shadow: 3px 3px 5px white;
+}
+
+#menu1,
+#menu2,
+#menu3,
+#menu4,
+#menu5 {
+  width: 100%;
+}
+
+#menu1 {
+  background: url(./travel1.jpg) no-repeat center/cover;
+}
+
+#menu2 {
+  background: url(./travel2.jpg) no-repeat center/cover;
+}
+
+#menu3 {
+  background: url(./travel3.jpg) no-repeat center/cover;
+}
+
+#menu4 {
+  background: url(./travel4.jpg) no-repeat center/cover;
+}
+
+#menu5 {
+  background: url(./travel5.jpg) no-repeat center/cover;
+}
+
+footer {
+  width: 100%;
+  background-color: black;
+  height: 100px;
+}
+
+footer > p {
+  font-size: 14px;
+  color: white;
+  text-align: center;
+  line-height: 100px;
+}
+
+/* 태블릿 */
+@media (min-width: 768px) and (max-width: 1024px) {
+  #menus {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap; /*flex 컨테이너 안의 자식 요소들이 한 줄에 다 들어가지 않을 경우, 자동으로 다음 줄로 줄바꿈되도록*/
+  }
+  #menu1,
+  #menu2,
+  #menu3,
+  #menu4 {
+    width: 49%; /*빈 자리에 사진 하나가 더 올라와 자리를 채운다*/
+  }
+}
+
+/* 데스크탑 */
+@media (min-width: 1024px) {
+  #menus {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  #menu1,
+  #menu2,
+  #menu3,
+  #menu4 {
+    width: 32%;
+  }
+  #menu5 {
+    width: 64%;
+  }
+}

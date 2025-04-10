@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>timetable</title>
+    <link rel="stylesheet" href="./style1.css" />
+    <style></style>
+  </head>
+  <body>
+    <h1>주간계획표</h1>
+    <table>
+      <caption>
+        요일
+      </caption>
+      <thead>
+        <tr>
+          <th>시간</th>
+          <th>월요일</th>
+          <th>화요일</th>
+          <th>수요일</th>
+          <th>목요일</th>
+          <th>금요일</th>
+          <th>토요일</th>
+          <th>일요일</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>00:00~06:00</td>
+          <td colspan="7">취침</td>
+        </tr>
+        <tr>
+          <td>06:00~12:00</td>
+          <td colspan="5">오전공부</td>
+          <td colspan="2">운동, 청소</td>
+        </tr>
+        <tr>
+          <td>12:00~18:00</td>
+          <td colspan="5">오후공부</td>
+          <td rowspan="3">공부</td>
+          <td rowspan="2">공부</td>
+        </tr>
+        <tr>
+          <td>18:00~22:00</td>
+          <td colspan="5">자유시간</td>
+        </tr>
+        <tr>
+          <td>22:00~24:00</td>
+          <td colspan="5">과제</td>
+          <td>자유시간</td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>

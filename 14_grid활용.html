@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>grid 레이아웃 활용</title>
+    <style>
+      .layout {
+        display: grid;
+        grid-template-areas:
+          "header header"
+          "sidebar content"
+          "footer footer";
+        grid-template-columns: 200px 1fr;
+        grid-template-rows: 60px 1fr 40px; /*헤더60, 푸터40, 중간:나머지*/
+        height: 100vh;
+        gap: 10px;
+      }
+
+      .box {
+        padding: 20px;
+        font-weight: bold;
+        color: white;
+        display: flex;
+        align-items: center; /*상하 정렬*/
+        justify-content: center; /*좌우 정렬*/
+      }
+
+      .header {
+        background-color: cornflowerblue;
+        grid-area: header;
+      }
+      .sidebar {
+        background-color: darkorange;
+        grid-area: sidebar;
+      }
+      .content {
+        background-color: brown;
+        grid-area: content;
+      }
+      .footer {
+        background-color: darkolivegreen;
+        grid-area: footer;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="layout">
+      <div class="box header">header</div>
+      <!--박스2개 생성-->
+      <div class="box sidebar">sidebar</div>
+      <div class="box content">Main Content</div>
+      <div class="box footer">footer</div>
+    </div>
+  </body>
+</html>

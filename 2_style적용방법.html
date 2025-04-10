@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>css 스타일 적용 방식</title>
+    <link rel="stylesheet" href="./css/style.css" />
+    <!--상대주소-->
+
+    <style>
+      .internal {
+        color: brown;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>css 스타일 적용 방식</h1>
+    <!--내부스타일 적용-->
+    <p class="internal">이 문장은 내부 스타일시트로 스타일이 적용되었습니다.</p>
+    <!--p.internal : p태그의 class를 internal로 지정-->
+
+    <!--인라인스타일 적용 : 태그 안에서 스타일 적용-->
+    <p style="color: darkkhaki; font-style: italic">
+      이 문장은 인라인 스타일로 스타일이 적용되었습니다.
+    </p>
+
+    <!--스타일 적용 순서: 인라인 > 내부=외부(나중에 적용된 것이 먼저 스타일이 적용 된다.) -->
+  </body>
+</html>

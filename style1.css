@@ -1,0 +1,15 @@
+h1 {
+  color: lightcoral;
+}
+
+table {
+  width: 900px;
+  text-align: center;
+}
+thead {
+  background-color: darkgray;
+}
+
+tbody {
+  background-color: antiquewhite;
+}

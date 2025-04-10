@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>선택자</title>
+    <style>
+      /*1. 태그 선택자*/
+      h1 {
+        color: cornflowerblue;
+        text-align: center;
+      }
+
+      /*2. 클래스 선택자*/
+      .intro {
+        font-weight: bold;
+        color: deeppink;
+      }
+
+      /*3. 아이디 선택자*/
+      #student-list {
+        background-color: #c15353;
+        padding: 30px;
+      }
+
+      /*4. 그룹선택자*/
+      p,
+      li {
+        font-size: 12px;
+      }
+
+    /*5. 클래스 선택자*/
+     .highlight {
+        color: aqua;
+      }
+
+      /*6. 의사 클래스 선택자*/
+      a:link {        /*링크 디자인*/
+        color:crimson;
+        text-decoration: none;
+      }
+      a:visited {    /*방문하고 오면 색 바뀜*/
+        color: blue;
+        text-decoration: none;
+      }
+      a:hover {           /*마우스 올려놓으면 색 바뀜*/
+        color: aquamarine;
+        text-decoration: underline;
+      }
+
+      a:active {          /*클릭 시 색 바뀜*/
+        color:brown;
+        text-decoration: underline;
+      }
+   
+    /*7. 속성 선택자*/
+    /*a[] : a태그이면서 해당 속성에만 적용*/
+      a[href = '#'] {
+        font-weight: bold;
+        color: red;
+    }
+     /* ^ : 포함되어 있는 것을 찾아라*/
+    a[href^='https'] {             
+        font-weight: bold;
+        color: aqua;
+    }
+
+    /*8. 자식 선택자*/
+    ul#student-list > li {           
+        list-style-type: square;
+    }  /*ul태그 이면서 student-list > 자식 li*/
+
+    /*9. 자손 선택자*/
+    ul#student-list p {         
+        color: aquamarine;
+        font-style: italic;
+    }    /*한 칸 띄고 p작성, ul내부에 있는 모든 p 태그 선택*/
+
+    /*10. 형제 선택자 : 자신 이후 형제에만 적용*/
+    p.intro + p {
+        background-color: blue;
+    }
+
+    /*11. 인접 형제 선택자*/
+    p.intro~ p {                      
+        font-size: 20px;
+    }
+
+    </style>
+  </head>
+  <body>
+    <h1>선택자</h1>
+    <p class="intro">이 문단은 첫번째 문단입니다.</p>
+    <p>이 문단은 두번째 문단입니다.</p>
+    <span class="intro">이 문장은 첫 번째 문장입니다.</span>
+
+    <ul id="student-list">
+      <li>김사과</li>
+      <li>오렌지</li>
+      <li>반하나</li>
+      <p class="highlight">출석부</p>
+    </ul>
+
+    <hr />
+
+    <p>
+      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Culpa, deleniti?
+      Maxime velit ex quod expedita illo placeat eos rerum eius nesciunt nam
+      aut, tenetur, laborum, repellat odio veritatis. Rerum, impedit!
+    </p>
+    <p>
+      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Culpa, deleniti?
+      Maxime velit ex quod expedita illo placeat eos rerum eius nesciunt nam
+      aut, tenetur, laborum, repellat odio veritatis. Rerum, impedit!
+    </p>
+    <p>
+      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Culpa, deleniti?
+      Maxime velit ex quod expedita illo placeat eos rerum eius nesciunt nam
+      aut, tenetur, laborum, repellat odio veritatis. Rerum, impedit!
+    </p>
+    <p>
+      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Culpa, deleniti?
+      Maxime velit ex quod expedita illo placeat eos rerum eius nesciunt nam
+      aut, tenetur, laborum, repellat odio veritatis. Rerum, impedit!
+    </p>
+    <p>
+      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Culpa, deleniti?
+      Maxime velit ex quod expedita illo placeat eos rerum eius nesciunt nam
+      aut, tenetur, laborum, repellat odio veritatis. Rerum, impedit!
+    </p>
+    <p>
+      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Culpa, deleniti?
+      Maxime velit ex quod expedita illo placeat eos rerum eius nesciunt nam
+      aut, tenetur, laborum, repellat odio veritatis. Rerum, impedit!
+    </p>
+    <p>
+      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Culpa, deleniti?
+      Maxime velit ex quod expedita illo placeat eos rerum eius nesciunt nam
+      aut, tenetur, laborum, repellat odio veritatis. Rerum, impedit!
+    </p>
+    <p>
+      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Culpa, deleniti?
+      Maxime velit ex quod expedita illo placeat eos rerum eius nesciunt nam
+      aut, tenetur, laborum, repellat odio veritatis. Rerum, impedit!
+    </p>
+    <p>
+      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Culpa, deleniti?
+      Maxime velit ex quod expedita illo placeat eos rerum eius nesciunt nam
+      aut, tenetur, laborum, repellat odio veritatis. Rerum, impedit!
+    </p>
+    <p>
+      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Culpa, deleniti?
+      Maxime velit ex quod expedita illo placeat eos rerum eius nesciunt nam
+      aut, tenetur, laborum, repellat odio veritatis. Rerum, impedit!
+    </p>
+
+    <a href="https://www.naver.com">외부링크</a>
+
+     <!--# : 맨 위로 이동-->
+    <a href="#">내부링크1</a>
+
+   <!--# id : 원하는 위치까지 스크롤-->
+    <a href="#student-list">내부링크2</a>
+    
+  </body>
+</html>
+
+<!--(속성)클래스와 아이디 차이 
+: 앞의 태그와 상관없이 모두 적용, css에서 많이 사용됨
+아이디는 유일해야 함.(identity) 자바스크립트에서 많이 사용됨 -->
+
+    <!--기본 픽셀 : 16px(모바일 기본 픽셀: 12px)-->
+  </body>
+</html>

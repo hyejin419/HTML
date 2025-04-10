@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>float2</title>
+    <style>
+      /*div 수평정렬*/
+      #box1 {
+        background-color: gold;
+        float: left;
+        margin-right: 20px;
+      }
+      #box2 {
+        background-color: palegoldenrod;
+        float: left;
+        margin-right: 20px;
+      }
+      #box3 {
+        background-color: palevioletred;
+        float: left;
+        margin-right: 20px;
+      }
+      #box4 {
+        background-color: palevioletred;
+        float: right;
+      }
+
+      hr {
+        clear: both;
+      } /*float는 부모의 높이 계산에서 제외되기 때문에 (남은 공간에 들어가려는 성질)이를 해결하려면 clear, clearfit 사용*/
+      p {
+        padding: 10px;
+        text-align: center;
+        font: 20px;
+      }
+      #p1 {
+        width: 38%;
+        background-color: gold;
+        float: left;
+        margin-bottom: 20px;
+      }
+      #p2 {
+        width: 53%;
+        background-color: aquamarine;
+        float: right;
+      }
+      #p3 {
+        background-color: blue;
+        clear: both;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="box1">박스1</div>
+    <!--#box${박스$}*4-->
+    <div id="box2">박스2</div>
+    <div id="box3">박스3</div>
+    <div id="box4">박스4</div>
+    <hr />
+
+    <div id="p1">
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis itaque
+        harum molestiae libero aliquam, obcaecati repudiandae recusandae non
+        necessitatibus enim. Quos, odio blanditiis. Quam delectus excepturi
+        quaerat mollitia, autem impedit.
+      </p>
+    </div>
+
+    <div id="p2">
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis itaque
+        harum molestiae libero aliquam, obcaecati repudiandae recusandae non
+        necessitatibus enim. Quos, odio blanditiis. Quam delectus excepturi
+        quaerat mollitia, autem impedit.
+      </p>
+    </div>
+    <div id="p3">
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis itaque
+        harum molestiae libero aliquam, obcaecati repudiandae recusandae non
+        necessitatibus enim. Quos, odio blanditiis. Quam delectus excepturi
+        quaerat mollitia, autem impedit.
+      </p>
+    </div>
+  </body>
+</html>

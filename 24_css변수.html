@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS 변수</title>
+    <style>
+      /*
+            기본 문법
+            :root {
+                --변수이름: 값;
+                --변수이름: 값;
+                ...
+            }
+            선택자 {
+                속성: var(--변수이름);
+            }
+        */
+      :root {
+        --background-color1: deepskyblue;
+        --background-color2: deeppink;
+        --text-color: white;
+      }
+      .first-list {
+        background-color: var(--background-color1);
+        color: var(--text-color);
+      }
+      .second-list {
+        background-color: var(--background-color2);
+        color: var(--text-color);
+      }
+    </style>
+  </head>
+  <body>
+    <ul class="first-list">
+      <li>김사과</li>
+      <li>반하나</li>
+    </ul>
+    <ul class="second-list">
+      <li>오렌지</li>
+      <li>이메론</li>
+    </ul>
+  </body>
+</html>

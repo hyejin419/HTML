@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>폼 태그</title>
+    <style>
+      @font-face {
+        font-family: "Ownglyph_meetme-Rg";
+        src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2402_1@1.0/Ownglyph_meetme-Rg.woff2")
+          format("woff2");
+        font-weight: normal;
+        font-style: normal;
+      }
+      * {
+        box-sizing: border-box;
+        font-family: Ownglyph_meetme-Rg;
+        margin: 0;
+        padding: 0;
+      
+      }
+      body {
+        margin: 0;
+        background-image: url(./knight.jpg);
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+      }
+      main {
+        max-width: 600px;
+        margin: 0 auto;
+        margin-top: 30px;
+        background-color: yellow;
+        padding: 30px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+      h1 {
+        text-align: center;
+        margin-bottom: 30px;
+      }
+      form {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+      }
+      label {
+        font-weight: bold;
+        margin-bottom: 5px;
+      }
+      input,
+      textarea,
+      button {
+        padding: 10px;
+        width: 100%;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+      }
+      input[type="radio"],
+      input[type="checkbox"] {
+        width: auto;
+        margin-right: 5px;
+      }
+      .form-group.inline {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+      input[type="color"] {
+        width: 50px;
+        height: 40px;
+        padding: 0;
+        border: none;
+      }
+
+      .form-group {
+        margin-bottom: 15px;
+      }
+      button[type="submit"] {
+        background-color: #4caf50;
+        color: white;
+        font-size: 1rem;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+      }
+      button[type="submit"]:hover {
+        background-color: #45a049;
+      }
+      .footer-text {
+        text-align: center;
+        font-size: 0.9rem;
+        margin-top: 20px;
+        color: #777;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="background"></div>
+    <main>
+      <h1>회원 가입</h1>
+      <form action="/signup" method="post">
+        <div class="form-group">
+          <label for="name">이름</label>
+          <input
+            type="text"
+            maxlength="20"
+            name="name"
+            id="name"
+            placeholder="이름을 입력하세요"
+          />
+        </div>
+        <div class="form-group">
+          <label for="email">이메일</label>
+          <input
+            type="email"
+            name="email"
+            maxlength="100"
+            id="email"
+            placeholder="이메일을 입력하세요"
+          />
+        </div>
+        <div class="form-group">
+          <label for="password">비밀번호</label>
+          <input
+            type="password"
+            name="password"
+            id="password"
+            maxlength="20"
+            placeholder="비밀번호를 입력하세요"
+          />
+        </div>
+        <div class="form-group">
+          <label for="hp">비밀번호 확인</label>
+          <input
+            type="password"
+            id="hp"
+            name="hp"
+            maxlength="20"
+            placeholder="비밀번호를 입력하세요"
+          />
+        </div>
+
+        <div class="form-group">
+          성별
+          <label
+            >남자<input type="radio" id="male" name="gender" value="남" checked
+          /></label>
+          <label
+            >여자<input type="radio" id="female" name="gender" value="여"
+          /></label>
+        </div>
+
+        <div class="interests-container">
+          관심사 선택 (복수선택 가능) <br />
+          <label class="interest">
+            <input type="checkbox" name="interest" value="어린왕자" />
+            <span>어린왕자</span>
+          <label class="interest">
+            <input type="checkbox" name="interest" value="토끼와 거북이" />
+            <span>토끼와 거북이</span>
+          </label>
+          <label class="interest">
+            <input type="checkbox" name="interest" value="콩쥐팥쥐" />
+            <span>콩쥐팥쥐</span>
+          </label>
+          <label class="interest">
+            <input type="checkbox" name="interest" value="말 안듣는 청개구리" />
+            <span>말 안듣는 청개구리</span>
+          </label>
+          <label class="interest">
+            <input type="checkbox" name="interest" value="선녀와 나무꾼" />
+            <span>선녀와 나무꾼</span>
+          </label>
+        </div>
+        <div class="form-group">
+          <label for="intro">자기소개</label>
+          <textarea
+            name="intro"
+            id="intro"
+            placeholder="간단한 자기소개를 작성해주세요."
+          ></textarea>
+        </div>
+        <button type="submit">가입하기</button>
+      </form>
+    </main>
+  </body>
+</html>
