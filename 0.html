@@ -7,20 +7,30 @@
     <meta name="description" content="세상에서 가장 뛰어난 AI 개발자" />
     <meta name="author" content="Hyejin" />
     <!--소셜 미디어 공유용 메타 태그(open gragh)-->
-
     <meta property="og:type" content="website" />
+    <meta property="og:locale" content="ko_KR" />
     <meta property="og:site_name" content="Hyejin's Website" />
     <meta property="og:title" content="Hyejin's Website" />
     <meta property="og:url" content="https://hyejin198.github.io/" />
     <meta property="og:description" content="안녕하세요! 김혜진입니다." />
-    <meta property="og:image" content="https://hyejin198.github.io/images/avatar.png" />
-    <link rel="shortcut icon" href="https://hyejin198.github.io/images/avatar.png" type="images/x-icon" />
+    <meta 
+        property="og:image" 
+        content="https://hyejin198.github.io/images/avatar.png" 
+    />
+
+    <link 
+        rel="shortcut icon" 
+        href="https://hyejin198.github.io/images/avatar.png" 
+        type="images/x-icon" 
+    />
     <link rel="stylesheet" href="./css/style.css" />
     <!--FrontAwosome-->
     <script
       src="https://kit.fontawesome.com/133260cff9.js"
       crossorigin="anonymous"
     ></script>
+<script defer src="./js/main.js"></script>
+<script defer src="./js/projects.js"></script>
   </head>
   <body>
     <!--header-->
@@ -39,6 +49,9 @@
           <li><a href="#contact" class="header__menu__item">연락처</a></li>
         </ul>
       </nav>
+      <button class="header__toggle">
+        <i class="fa-solid fa-bars"></i>
+      </button>
     </header>
     <!--/header-->
 
@@ -46,9 +59,10 @@
     <main>
       <!--home-->
       <section id="home">
+        <div class="home__container">
         <img
-          class="home__avatar"
-          src="./images/avatar.png"
+        class="home__avatar"
+        src="./images/avatar.png"
           alt="Hyejin's profile"
         />
         <h2 class="home__title">
@@ -59,6 +73,7 @@
           세상에서 가장 뛰어난 AI 개발자 김혜진입니다!
         </p>
         <a class="home__contact" href="#contact">연락처</a>
+    </div>
       </section>
       <!--/home-->
 
@@ -75,20 +90,20 @@
           perspiciatis dolor ipsum ad officiis consectetur fugiat quidem
           asperiores modi nostrum.
         </p>
-        <ul class="skills">
-          <li class="skill">
-            <i class="fa-brands fa-html5 skill__icon"></i>
-            <p class="skill__title">Front-end</p>
+        <ul class="majors">
+          <li class="major">
+            <i class="fa-brands fa-html5 major__icon"></i>
+            <p class="major__title">Front-end</p>
             <p>HTML, CSS, JavaScript, Node.js, React</p>
           </li>
-          <li class="skill">
-            <i class="fa-solid fa-mobile skill__icon"></i>
-            <p class="skill__title">Moblie</p>
+          <li class="major">
+            <i class="fa-solid fa-mobile major__icon"></i>
+            <p class="major__title">Moblie</p>
             <p>Android, IOS, Kotlin, React-Native</p>
           </li>
-          <li class="skill">
-            <i class="fa-solid fa-rocket skill__icon"></i>
-            <p class="skill__title">AI</p>
+          <li class="major">
+            <i class="fa-solid fa-rocket major__icon"></i>
+            <p class="major__title">AI</p>
             <p>Python, Tensorflow, Pytorch, Numpy</p>
           </li>
         </ul>
@@ -120,14 +135,14 @@
           commodi atque repudiandae animi deleniti quidem voluptatum neque quas
           provident ipsam, hic, esse dolorem harum consequuntur distinctio.
         </p>
-        <div class="tools">
+        <div class="skills">
           <section class="tools__coding">
-            <h3 class="tools__title">언어</h3>
+            <h3 class="skills__title">언어</h3>
             <ul>
               <li class="bar">
                 <div class="bar__metadata"><span>HTML</span> <span>90%</span></div>
                 <div class="bar__bg"><div class="bar__value"
-                  style="width: 90%"></div></div>
+                  style="width: 100%"></div></div>
               </li>
               <li class="bar">
                 <div class="bar__metadata"><span>CSS</span> <span>80%</span></div>
@@ -149,8 +164,8 @@
             </ul>
           </section>
 
-          <section class="tools__tools">
-            <h3 class="tools__title">도구</h3>
+          <section class="skills__tools">
+            <h3 class="skills__title">도구</h3>
             <ul>
               <li>Visual Studio Code</li>
               <li>Intellij</li>
@@ -160,8 +175,8 @@
             </ul>
           </section>
 
-          <section class="tools__etc">
-            <h3 class="tools__title">기타</h3>
+          <section class="skills__etc">
+            <h3 class="skills__title">기타</h3>
             <ul>
               <li>Git</li>
               <li>SLACK</li>
@@ -180,70 +195,88 @@
         <p class="description">Project</p>
         <ul class="categories">
           <li>
-            <button class="category category--selected">All <span class="category__count">10</span></button>
+            <button class="category category--selected" data-category=""all>All <span class="category__count">10</span></button>
           </li>
           <li>
-            <button class="category">Front-end <span class="category__count">3</span></button>
+            <button class="category" data-category="front-end">Front-end <span class="category__count">3</span></button>
           </li>
           <li>
-            <button class="category">Mobile <span class="category__count">3</span></button>
+            <button class="category" data-category="mobile">Mobile <span class="category__count">3</span></button>
           </li>
           <li>
-            <button class="category">AI <span class="category__count">4</span></button>
+            <button class="category" data-category="ai">AI <span class="category__count">4</span></button>
           </li>
         </ul>
         <ul class="projects">
-          <li class="project">
+          <li class="project" data-type="front-end">
             <a href="#" target="_blank">
               <img src="./images/bird.png" alt="project 이미지" class="project__img" />
-              <div>
+              <div class="project__metadata">
                 <h3 class="project__title">Project #1</h3>
-                <p>티맵</p>
+                <p>프론트엔드 작업1</p>
               </div>
             </a>
           </li>
-          <li  class="project">
+          <li  class="project" data-type="front-end">
             <a href="#" target="_blank">
               <img src="./images/bird.png" alt="project 이미지" class="project__img"/>
               <div class="project__metadata">
-                <h3 class="project__title">Project #1</h3>
-                <p>티맵</p>
+                <h3 class="project__title">Project #2</h3>
+                <p>프론트엔드 작업2</p>
               </div>
             </a>
           </li>
-          <li  class="project">
+          <li  class="project" data-type="front-end">
             <a href="#" target="_blank">
               <img src="./images/bird.png" alt="project 이미지" class="project__img" />
               <div class="project__metadata">
-                <h3 class="project__title">Project #1</h3>
-                <p>티맵</p>
+                <h3 class="project__title">Project #3</h3>
+                <p>프론트엔드 작업3</p>
               </div>
             </a>
           </li>
-          <li  class="project">
+          <li  class="project" data-type="mobile">
             <a href="#" target="_blank"></a>
               <img src="./images/bird.png" alt="project 이미지" class="project__img"/>
               <div class="project__metadata">
-                <h3 class="project__title">Project #1</h3>
-                <p>티맵</p>
+                <h3 class="project__title">Project #4</h3>
+                <p>모바일 작업1</p>
               </div>
             </a>
           </li>
-          <li  class="project">
+          <li  class="project" data-type="mobile">
             <a href="#" target="_blank">
               <img src="./images/bird.png" alt="project 이미지" class="project__img"/>
               <div  class="project__metadata">
-                <h3 class="project__title">Project #1</h3>
-                <p>티맵</p>
+                <h3 class="project__title">Project #5</h3>
+                <p>모바일 작업2</p>
               </div>
             </a>
           </li>
-          <li  class="project">
+          <li  class="project" data-type="mobile">
             <a href="#" target="_blank">
               <img src="./images/bird.png" alt="project 이미지" class="project__img" />
               <div  class="project__metadata">
-                <h3 class="project__title">Project #1</h3>
-                <p>티맵</p>
+                <h3 class="project__title">Project #6</h3>
+                <p>모바일 작업3</p>
+              </div>
+            </a>
+          </li>
+          <li  class="project" data-type="ai">
+            <a href="#" target="_blank">
+              <img src="./images/bird.png" alt="project 이미지" class="project__img" />
+              <div  class="project__metadata">
+                <h3 class="project__title">Project #7</h3>
+                <p>AI 작업1</p>
+              </div>
+            </a>
+          </li>
+          <li  class="project" data-type="ai">
+            <a href="#" target="_blank">
+              <img src="./images/bird.png" alt="project 이미지" class="project__img" />
+              <div  class="project__metadata">
+                <h3 class="project__title">Project #8</h3>
+                <p>AI 작업2</p>
               </div>
             </a>
           </li>
@@ -260,9 +293,18 @@
           <li class="license">
             <img class="license__img" src="./images/certification2.png" alt="정보처리기사 자격증" />
             <div class="license__bubble">
-              <p><a href="#">한국산업인력공단</a></p>
+              <p><a href="#" class="license__bubble__name">한국산업인력공단</a></p>
               <p>
                 컴퓨터를 효과적으로 활용하기 위해서 하드웨어뿐만 아니라 정교한 소프트웨어가 필요하다. 이에 따라 우수한 프로그램을 개발하여 업무의 효율성을 높이고, 궁극적으로 국가발전에 이바지하기 위해서 컴퓨터에 관한 전문적인 지식과 기술을 갖춘 사람을 양성할 목적으로 제정됨.
+              </p>
+            </div>
+          </li>
+          <li class="license">
+            <img class="license__img" src="./images/certification.png" alt="빅데이터분석기사" />
+            <div class="license__bubble">
+              <p><a href="#" class="license__bubble__name">한국데이터산업진흥원</a></p>
+              <p>
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ad, voluptas veniam eos doloribus sed accusamus adipisci sequi sapiente accusantium ratione enim aspernatur corrupti, ipsum, nesciunt deserunt dolore fugiat eaque harum?
               </p>
             </div>
           </li>
@@ -282,6 +324,7 @@
               <p>
                 데이터분석 준전문가(ADsP : Advanced Data Analytics Semi-Professional)란 데이터 이해에 대한 기본지식을 바탕으로 데이터분석 기획 및 데이터분석 등의 직무를 수행하는 실무자를 말한다.
               </p>
+            </div>
           </li>
           </ul>
       </section>
@@ -308,11 +351,14 @@
             <a class="contact_link" href="https://github.com/hyejin198" target="_blank" title="깃허브">
             <i class="fa-brands fa-github"></i></a>
           </li>
+          <li>
+            <a class="contact_link" href="https://github.com/hyejin198" target="_blank" title="깃허브">
+            <i class="fa-brands fa-github"></i></a>
+          </li>
         </ul>
         <p>&copy;Hyejin - All rights reserved</p>
       </div>
       </footer>
       <!--/footer-->
-    <!---->
   </body>
 </html>
